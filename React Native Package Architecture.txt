@@ -1,0 +1,72 @@
+React Native Package Architecture
+Specification
+Project: Best Buddy (3-Day ADHD Organizer)
+Document Purpose: Technical package breakdown mapping directly to client specifications
+detailed in user sketches and PRD requirements.
+1. Summary Technical Stack Overview
+To implement the frictionless, encouraging environment requested by the client, the following
+package dependencies must be integrated into the core React Native repository architecture:
+Package Dependency App Feature Target Primary Developer
+Implementation Benefit
+react-native-pager-view 3-Day Swipe Navigation Native hardware-accelerated
+fluid side-scrolling column
+navigation.
+expo-speech-recognition "Speak to Text" Entry Continuous stream dictation
+avoiding legacy New
+Architecture crashes.
+react-native-mmkv Automated Midnight
+Roll-Over
+Synchronous super-fast IO
+checking execution on app
+state boots.
+lottie-react-native Affirmation & 3-Star
+Rewards
+Vector JSON animations
+delivering delightful
+immediate UI feedback.
+Package Dependency App Feature Target Primary Developer
+Implementation Benefit
+@shopify/flash-list Categorized Task Groupings Recycled component views
+reducing lagging over
+extensive lists.
+2. Detailed Architecture Breakdown by Core Feature
+A. Navigation & Fluid Layout (The 3-Day Cycle View)
+● react-native-pager-view
+○ Purpose: Essential for executing the client's mandatory side-scrolling framework ("Swipe
+to next day").
+○ Details: Allocates 3 distinct view panes mapping dynamically to "Today", "Tomorrow", and
+"The Next Day".
+● react-native-gesture-handler & react-native-reanimated
+○ Purpose: Supports smooth interactive transitions.
+○ Details: Coordinates shifting base visual hues cleanly (Pale Pink to Melon to Banana)
+natively on the 60fps UI thread.
+B. Low-Friction Entry & Automatic Capturing
+● expo-speech-recognition
+○ Purpose: Resolves deprecated microphone streaming libraries to build the client's
+requested voice portal ("Speak to text box").
+○ Details: Captures live mic feeds locally to assemble immediate text strings inside task
+creation modals.
+● linkify-it / react-native-linkify
+○ Purpose: Fulfills smart extraction request ("Add any incoming phone numbers or dates").
+○ Details: Leverages regex heuristics parsing incoming voice text dumps to strip numerical
+phone tags or calendar dates automatically.
+C. Automated Time Shifts & Local Persistence
+● react-native-mmkv
+○ Purpose: Serves as the central state anchor evaluating past system checks.
+○ Details: Bypasses async performance roadblocks to immediately verify current device
+timestamps during initialization cycles.
+● date-fns / dayjs
+○ Purpose: Safely maps shifting relative days without formatting inconsistencies.
+○ Details: Evaluates local time coordinates to accurately execute the "Roll over at midnight"
+logic across all 4 categories (Work, Home, Pets, Personal).
+D. Gamification & Positive Behavioral Feedback
+● lottie-react-native
+○ Purpose: Combats task-evasion and ADHD anxiety using micro-rewards ("Small Reward /
+Affirmation for accomplishing each task").
+○ Details: Displays interactive reward layers (like 3-star exploding particle clouds or smiling
+sun graphics) right when an entry check is toggled.
+E. Performance-Driven List Structuring
+● @shopify/flash-list
+○ Purpose: Prevents frame-drops across complicated layouts.
+○ Details: Replaces default flatlist scrolling to cleanly subdivide nested layout sections (e.g.,
+Work -> Prep, Pets -> Wash/Walk, Personal -> Food Diary).

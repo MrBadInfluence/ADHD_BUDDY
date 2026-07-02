@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "ADHD Buddy",
+    "slug": "mumsadhdapp",
+    "plugins": [
+      ["expo-speech-recognition", {
+        "microphonePermission": "ADHD Buddy needs your microphone for voice input.",
+        "speechRecognitionPermission": "ADHD Buddy needs speech recognition to convert your voice to text."
+      }]
+    ],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "adhdbuddy",
+    "assetBundlePatterns": ["**/*"],
+    "android": {
+      "package": "com.anonymous.BestBuddyADHD",
+      "icon": "./assets/icon.png",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#EDE9E0"
+      },
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [{ "scheme": "adhdbuddy" }],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
+    }
+  }
+}

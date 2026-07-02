@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ADHD Buddy</string>
+    <string name="tasks_title">Tasks</string>
+    <string name="no_tasks">No tasks yet</string>
+    <string name="reminder_title">Reminder</string>
+    <string name="mark_done">Done</string>
+    <string name="snooze">Snooze 5m</string>
+    <string name="syncing">Syncing…</string>
+    <string name="open_phone_app">Open Phone App</string>
+</resources>
