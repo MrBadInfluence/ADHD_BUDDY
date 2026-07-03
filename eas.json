@@ -1,0 +1,18 @@
+{
+  "cli": {
+    "version": ">= 16.0.0"
+  },
+  "build": {
+    "preview": {
+      "android": {
+        "buildType": "apk",
+        "credentialsSource": "local"
+      }
+    },
+    "production": {
+      "android": {
+        "credentialsSource": "local"
+      }
+    }
+  }
+}
